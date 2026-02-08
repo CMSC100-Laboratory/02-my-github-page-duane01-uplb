@@ -23,4 +23,9 @@ this will challenge my lack of artistic skills when it comes to designing and co
 **Flexbox Progress and Brainstormed Portfolio Website: https://docs.google.com/document/d/1wlFIKIVGvjdR0_GJy6z7dUEUh2DediNA7R5CdsYAmuo/edit?usp=sharing**
 
 **References:**  
-
+**Glow - https://dev.to/ajones_codes/css-smart-image-glow-1deg**  
+**Cards - https://www.w3schools.com/howto/howto_css_cards.asp**  
+**Sticky - https://www.w3schools.com/css/css_positioning.asp**  
+**Grid - https://www.w3schools.com/css/css_grid.asp**  
+**Object-Position - https://www.w3schools.com/cssref/css3_pr_object-position.php**  
+**White-Space - https://www.w3schools.com/cssref/pr_text_white-space.php**  
