@@ -12,10 +12,12 @@ body {
     background: linear-gradient(to bottom right, #14213d, #000000);
     min-height: 100vh;
     color: white;
+    font-family: 'Inter', sans-serif;
 }
 
 .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;          
     justify-content: space-between;
     padding: 20px 5%; 
@@ -51,10 +53,12 @@ body {
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
 }
 
+/* ============ NAVIGATION BAR ==================== */
+
 #navbar {
     display: flex;
     gap: 15px;
-
+    flex-wrap: wrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -86,25 +90,240 @@ body {
 }
 
 #introduction{
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     padding: 100px 20px;
 }
 
-#profilecard{
-    border-radius: 50px;
-    border-width: 10px;
-    padding: 15px;
-    border-style: ridge;
+#intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
 }
 
-div #introduction p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+/* ============== TEXT ========== */
+#introtext {
+    flex: 1;
+}
+
+.greeting {
+    font-size: 3rem;
+    color: #fca311;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#introtext h1 {
+    font-size: 4.5rem;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+#introtext h1 span {
+    color: #e5e5e5;
+    font-weight: 300;
+}
+
+.subtext {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.university {
+    font-size: 1.5rem;
+    color: #adb5bd;
+    margin-top: 5px;
+}
+
+.seemore {
+    margin-top: 20px;
+    padding: 15px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-align: center;
+
+    background-color: #fca311;
+    color: #14213d;
+
+    box-shadow: 0 4px 15px rgba(252, 163, 17, 0.3);
+    border: none;
+
+    width: 100px;
+    transition: width 0.3s ease;
+}
+
+.seemore:hover{
+    width: 200px;
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(252, 163, 17, 0.5);
+}
+
+/* ---------------- PROFILE -------------------- */
+#profile-area {
+    position: relative;
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profilecard {
+    position: relative;
+    z-index: 2;
+
+    width: min(80vw, 400px);
+    height: min(80vw, 400px);
+
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Organic shape */
+    border: 4px solid #fca311;
+
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+#profilecard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-glow {
+    position: absolute;
+    width: min(80vw, 400px);
+    height: min(80vw, 400px);
+    background: radial-gradient(circle, rgba(252, 163, 17, 0.2) 0%, transparent 70%);
+    z-index: 1;
+}
+
+#introduction {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10%;
+    overflow: hidden;
+}
+
+#intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;        
+}
+
+/* --------------- PROJECTS -------------- */
+#projects {
+    background-color: transparent;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+#projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+/* ------ TITLE ------- */
+.section-title h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: #fca311;
+    border-radius: 2px;
+}
+
+/* ------ PROJECTS GRID ------ */
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* ---------- PROJECT CARD ------------- */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #fca311;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    height: 200px;
+    background: #14213d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: #adb5bd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: #fca311;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+h1, h2, h3, .logo, #navbar a {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.subtext {
+    font-family: 'Courier New', Courier, monospace; /* Or JetBrains Mono */
+    color: #fca311;
 }
 
 #footer{ 
