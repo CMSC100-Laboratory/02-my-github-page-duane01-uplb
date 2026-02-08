@@ -496,6 +496,32 @@ h1, h2, h3, .logo, #navbar a {
     gap: 50px;
 }
 
+#about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.about-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+
 
 /* ----- FOOTER --------- */
 .footer {
