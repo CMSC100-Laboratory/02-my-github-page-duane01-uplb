@@ -21,3 +21,6 @@ this will challenge my lack of artistic skills when it comes to designing and co
 **- Contact Details**  
 **- Essential Links/Socials**  
 **Flexbox Progress and Brainstormed Portfolio Website: https://docs.google.com/document/d/1wlFIKIVGvjdR0_GJy6z7dUEUh2DediNA7R5CdsYAmuo/edit?usp=sharing**
+
+**References:**  
+
